@@ -22,12 +22,12 @@ function HeaderClient() {
       <div className="container flex h-16 items-center space-x-4">
         <Link href="/" className="flex gap-2 items-center text-xl font-bold">
           <div className="relative">
-            <div className="w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold">
-              B
+            <div className="w-6 h-6 bg-[#B8FF3A] text-black rounded-full flex items-center justify-center text-xs font-bold">
+              P
             </div>
           </div>
-          <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-            Bingo Lotto
+          <span className="text-[#B8FF3A]">
+            Puzzle Party
           </span>
         </Link>
         <div className="flex-1" />
@@ -35,7 +35,7 @@ function HeaderClient() {
           <Button
             variant="outline"
             size="sm"
-            className="gap-2 border-purple-500/50 text-white hover:bg-purple-500/10"
+            className="gap-2 border-[#B8FF3A]/50 text-white hover:bg-[#B8FF3A]/10"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Home
@@ -58,9 +58,9 @@ function BackButton() {
   return (
     <div className="text-center mt-12">
       <Link href="/">
-        <Button className="gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/25">
+        <Button className="gap-2 bg-[#B8FF3A] text-black hover:bg-[#a6eb2a] transition-all duration-300 shadow-lg shadow-[#B8FF3A]/25">
           <ArrowLeft className="h-4 w-4" />
-          Back to Bingo Lotto
+          Back to Puzzle Party
         </Button>
       </Link>
     </div>
@@ -89,7 +89,7 @@ export default function TermsOfServicePage() {
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-black via-gray-900 to-black text-white">
       {/* Animated background elements */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#B8FF3A]/10 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
@@ -107,11 +107,11 @@ export default function TermsOfServicePage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12 animate-fadeIn">
                 <div className="flex justify-center mb-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40">
                     <FileText className="h-8 w-8" />
                   </div>
                 </div>
-                <h1 className="text-4xl font-bold tracking-tighter md:text-5xl bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold tracking-tighter md:text-5xl text-[#B8FF3A]">
                   Terms of Service
                 </h1>
                 <p className="text-gray-400 mt-4">

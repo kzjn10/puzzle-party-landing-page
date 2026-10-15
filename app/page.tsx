@@ -8,14 +8,13 @@ import {
   Users,
   Zap,
   ChevronRight,
-  Apple,
-  ShoppingBag,
-  Smartphone,
   Wifi,
-  Clock,
+  LayoutGrid,
+  Puzzle,
 } from "lucide-react";
 
 import { useState } from "react";
+import { AppStoreIcon, PlayStoreIcon } from "@/components/store-icons";
 import type React from "react";
 
 export default function LandingPage() {
@@ -85,13 +84,13 @@ export default function LandingPage() {
       <div className="flex min-h-screen flex-col bg-gradient-to-b from-black via-gray-900 to-black text-white overflow-hidden">
         {/* Animated background elements */}
         <div className="fixed inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#B8FF3A]/20 rounded-full blur-3xl animate-pulse"></div>
           <div
             className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
-            className="absolute top-2/3 left-1/3 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
+            className="absolute top-2/3 left-1/3 w-72 h-72 bg-[#B8FF3A]/15 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: "2s" }}
           ></div>
         </div>
@@ -103,49 +102,49 @@ export default function LandingPage() {
               className="flex gap-2 items-center text-xl font-bold"
             >
               <div className="relative">
-                <div className="w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold">
+                <div className="w-6 h-6 bg-[#B8FF3A] text-black rounded-full flex items-center justify-center text-xs font-bold">
                       <Image
                       src="/logo.png?height=32&width=32"
                       width={32}
                       height={32}
-                      alt="Loto"
+                      alt="Puzzle Party"
                     />
                 </div>
               </div>
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Loto
+              <span className="text-[#B8FF3A]">
+                Puzzle Party
               </span>
             </Link>
             <div className="flex flex-1 items-center justify-end space-x-4">
               <nav className="flex items-center space-x-6">
                 <Link
                   href="#features"
-                  className="hidden text-sm font-medium transition-all duration-300 hover:text-purple-400 sm:block"
+                  className="hidden text-sm font-medium transition-all duration-300 hover:text-[#B8FF3A] sm:block"
                 >
                   Features
                 </Link>
                 <Link
                   href="#gameplay"
-                  className="hidden text-sm font-medium transition-all duration-300 hover:text-purple-400 sm:block"
+                  className="hidden text-sm font-medium transition-all duration-300 hover:text-[#B8FF3A] sm:block"
                 >
                   How to Play
                 </Link>
                 <Link
                   href="#testimonials"
-                  className="hidden text-sm font-medium transition-all duration-300 hover:text-purple-400 sm:block"
+                  className="hidden text-sm font-medium transition-all duration-300 hover:text-[#B8FF3A] sm:block"
                 >
                   Reviews
                 </Link>
                 <Link
                   href="#contact"
-                  className="hidden text-sm font-medium transition-all duration-300 hover:text-purple-400 sm:block"
+                  className="hidden text-sm font-medium transition-all duration-300 hover:text-[#B8FF3A] sm:block"
                 >
                   Contact
                 </Link>
 
                 <Button
                   size="sm"
-                  className="gap-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/25"
+                  className="gap-1 bg-[#B8FF3A] text-black hover:bg-[#a6eb2a] transition-all duration-300 shadow-lg shadow-[#B8FF3A]/25"
                   onClick={handleScroll}
                 >
                   <Download className="h-4 w-4" />
@@ -165,16 +164,17 @@ export default function LandingPage() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-4 animate-fadeIn">
                   <div className="space-y-2">
-                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent animate-gradient">
-                      Play Loto Offline with Friends - No Paper Needed!
+                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[#B8FF3A]">
+                      Slide the tiles. Rebuild the picture.
                     </h1>
                     <p
                       className="max-w-[600px] text-gray-300 md:text-xl animate-fadeIn"
                       style={{ animationDelay: "0.2s" }}
                     >
-                      The perfect digital Loto companion for family gatherings,
-                      parties, and group events. Play classic Loto games
-                      without the hassle of paper cards - completely offline!
+                      Puzzle Party is a cheerful sliding-puzzle game. Choose a
+                      collection, pick an illustrated character, and put the
+                      picture back together by sliding tiles into the empty
+                      space.
                     </p>
                   </div>
                   <div
@@ -184,7 +184,7 @@ export default function LandingPage() {
                     <Link href="#download">
                       <Button
                         size="lg"
-                        className="gap-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/25 transform hover:scale-105"
+                        className="gap-1 bg-[#B8FF3A] text-black hover:bg-[#a6eb2a] transition-all duration-300 shadow-lg shadow-[#B8FF3A]/25 transform hover:scale-105"
                       >
                         <Download className="h-5 w-5" />
                         Download Free
@@ -194,7 +194,7 @@ export default function LandingPage() {
                       <Button
                         size="lg"
                         variant="outline"
-                        className="gap-1 border-purple-500/50 text-white hover:bg-purple-500/10 transition-all duration-300 transform hover:scale-105"
+                        className="gap-1 border-[#B8FF3A]/50 text-white hover:bg-[#B8FF3A]/10 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn How to Play
                         <ChevronRight className="h-4 w-4" />
@@ -210,8 +210,8 @@ export default function LandingPage() {
                       <span>No Internet Required</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-400">
-                      <Smartphone className="h-4 w-4" />
-                      <span>Works on All Devices</span>
+                      <Users className="h-4 w-4" />
+                      <span>Made for kids and teens</span>
                     </div>
                   </div>
                   <div
@@ -219,28 +219,28 @@ export default function LandingPage() {
                     style={{ animationDelay: "0.8s" }}
                   >
                     <Link
-                      href="https://apps.apple.com/app/id6746702948"
-                      className="flex items-center gap-2 transition-all duration-300 hover:text-purple-400"
+                      href="#download"
+                      className="flex items-center gap-2 transition-all duration-300 hover:text-[#B8FF3A]"
                     >
-                      <Apple className="h-6 w-6" />
+                      <AppStoreIcon className="h-6 w-6" />
                       <span className="text-sm">App Store</span>
                     </Link>
                     <Link
-                      href="https://play.google.com/store/apps/details?id=dev.evan.loto"
-                      className="flex items-center gap-2 transition-all duration-300 hover:text-purple-400"
+                      href="#download"
+                      className="flex items-center gap-2 transition-all duration-300 hover:text-[#B8FF3A]"
                     >
-                      <ShoppingBag className="h-6 w-6" />
+                      <PlayStoreIcon className="h-6 w-6" />
                       <span className="text-sm">Google Play</span>
                     </Link>
                   </div>
                 </div>
                 <div className="flex items-center justify-center animate-float">
-                  <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm md:aspect-square lg:order-last lg:aspect-video shadow-2xl shadow-purple-500/20">
+                  <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm md:aspect-square lg:order-last lg:aspect-video shadow-2xl shadow-[#B8FF3A]/20">
                     <Image
                       src="/5.png?height=720&width=1280"
                       width={1280}
                       height={720}
-                      alt="Loto Offline game screenshot"
+                      alt="Puzzle Party character puzzle"
                       className="object-cover transition-transform duration-700 hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
@@ -262,66 +262,67 @@ export default function LandingPage() {
             id="features"
             className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black/20"></div>
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#B8FF3A]/15 to-black/20"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#B8FF3A] to-transparent"></div>
             <div className="container px-4 md:px-6 relative">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2 animate-fadeIn">
-                  <div className="inline-block rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 text-sm text-white shadow-lg shadow-purple-500/25">
+                  <div className="inline-block rounded-lg bg-[#B8FF3A] px-3 py-1 text-sm text-black shadow-lg shadow-[#B8FF3A]/25">
                     App Features
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
-                    Perfect for Group Loto Games
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#B8FF3A]">
+                    A cheerful sliding puzzle
                   </h2>
                   <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Everything you need to host fun Loto games with family and
-                    friends, completely offline and paperless.
+                    Bright, toy-inspired pictures, friendly audio, and puzzle
+                    modes that work well for children and teens. Everything
+                    needed to play stays on the device.
                   </p>
                 </div>
               </div>
               <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
                 <div
-                  className="flex flex-col justify-center space-y-4 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 transition-all duration-300 hover:shadow-purple-500/10 hover:translate-y-[-5px] animate-fadeIn"
+                  className="flex flex-col justify-center space-y-4 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 transition-all duration-300 hover:shadow-[#B8FF3A]/20 hover:translate-y-[-5px] animate-fadeIn"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#B8FF3A]/10 text-[#B8FF3A]">
+                    <LayoutGrid className="h-6 w-6" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold">Lots of layouts</h3>
+                    <p className="text-gray-400">
+                      Standard 3x3, 4x4, and 5x5 boards, a portrait 3x5, and two
+                      3x3 variants with extra rail mechanics.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="flex flex-col justify-center space-y-4 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 transition-all duration-300 hover:shadow-[#B8FF3A]/20 hover:translate-y-[-5px] animate-fadeIn"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#B8FF3A]/10 text-[#B8FF3A]">
+                    <Puzzle className="h-6 w-6" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold">Two collections</h3>
+                    <p className="text-gray-400">
+                      A Classic 2D set alongside a toy-themed gallery of
+                      illustrated characters.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="flex flex-col justify-center space-y-4 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 transition-all duration-300 hover:shadow-[#B8FF3A]/20 hover:translate-y-[-5px] animate-fadeIn"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#B8FF3A]/10 text-[#B8FF3A]">
                     <Wifi className="h-6 w-6" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">100% Offline</h3>
+                    <h3 className="text-xl font-bold">Plays on the device</h3>
                     <p className="text-gray-400">
-                      No internet connection required. Perfect for any location
-                      or event.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="flex flex-col justify-center space-y-4 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 transition-all duration-300 hover:shadow-purple-500/10 hover:translate-y-[-5px] animate-fadeIn"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
-                    <Users className="h-6 w-6" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Group Friendly</h3>
-                    <p className="text-gray-400">
-                      Support for multiple players on different devices in the
-                      same room.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="flex flex-col justify-center space-y-4 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 transition-all duration-300 hover:shadow-purple-500/10 hover:translate-y-[-5px] animate-fadeIn"
-                  style={{ animationDelay: "0.5s" }}
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
-                    <Smartphone className="h-6 w-6" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold">No Paper Needed</h3>
-                    <p className="text-gray-400">
-                      Digital Loto cards on your phone or tablet - eco-friendly
-                      and convenient.
+                      Pictures, frames, fonts, and sound effects are stored
+                      locally. No backend is required to play.
                     </p>
                   </div>
                 </div>
@@ -333,21 +334,21 @@ export default function LandingPage() {
             id="gameplay"
             className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-purple-900/20"></div>
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-[#B8FF3A]/15"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#B8FF3A] to-transparent"></div>
             <div className="container px-4 md:px-6 relative">
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
                 <div className="flex flex-col justify-center space-y-4 animate-fadeIn">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 text-sm text-white shadow-lg shadow-purple-500/25">
+                    <div className="inline-block rounded-lg bg-[#B8FF3A] px-3 py-1 text-sm text-black shadow-lg shadow-[#B8FF3A]/25">
                       How to Play
                     </div>
-                    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
-                      Simple Setup for Group Fun
+                    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#B8FF3A]">
+                      Rebuild a picture, one slide at a time
                     </h2>
                     <p className="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                      Get your group Loto game started in minutes with our
-                      easy-to-use offline app.
+                      Every board is shuffled through legal moves, so each
+                      puzzle stays solvable.
                     </p>
                   </div>
                   <div className="space-y-4">
@@ -355,14 +356,14 @@ export default function LandingPage() {
                       className="flex items-center gap-4 transition-all duration-300 hover:translate-x-1 animate-fadeIn"
                       style={{ animationDelay: "0.2s" }}
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40">
                         <span className="font-bold">1</span>
                       </div>
                       <div className="space-y-1">
-                        <h3 className="font-medium">Download & Setup</h3>
+                        <h3 className="font-medium">Choose a collection</h3>
                         <p className="text-sm text-gray-400">
-                          Each player downloads the app and creates their
-                          digital Loto cards.
+                          Open the Classic 2D set or the toy-themed puzzle
+                          gallery.
                         </p>
                       </div>
                     </div>
@@ -370,14 +371,14 @@ export default function LandingPage() {
                       className="flex items-center gap-4 transition-all duration-300 hover:translate-x-1 animate-fadeIn"
                       style={{ animationDelay: "0.4s" }}
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40">
                         <span className="font-bold">2</span>
                       </div>
                       <div className="space-y-1">
-                        <h3 className="font-medium">Call Numbers</h3>
+                        <h3 className="font-medium">Pick a character</h3>
                         <p className="text-sm text-gray-400">
-                          One person calls out numbers while everyone marks
-                          their cards on their devices.
+                          Select an illustrated character, then start from a
+                          shuffled board.
                         </p>
                       </div>
                     </div>
@@ -385,14 +386,15 @@ export default function LandingPage() {
                       className="flex items-center gap-4 transition-all duration-300 hover:translate-x-1 animate-fadeIn"
                       style={{ animationDelay: "0.6s" }}
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40">
                         <span className="font-bold">3</span>
                       </div>
                       <div className="space-y-1">
-                        <h3 className="font-medium">Shout BINGO!</h3>
+                        <h3 className="font-medium">Slide the tiles</h3>
                         <p className="text-sm text-gray-400">
-                          First to complete a pattern wins! The app helps verify
-                          winning cards.
+                          Tap or drag tiles into the empty space. Standard
+                          boards use one empty cell. The special 3x3 modes add
+                          a rail with its own movement rules.
                         </p>
                       </div>
                     </div>
@@ -400,50 +402,50 @@ export default function LandingPage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div
-                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-purple-500/10 animate-float"
+                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-[#B8FF3A]/15 animate-float"
                     style={{ animationDelay: "0.1s" }}
                   >
                     <Image
                       src="/1.png?height=400&width=300"
                       width={300}
                       height={400}
-                      alt="Digital Loto card"
+                      alt="Illustrated puzzle character"
                       className="aspect-[3/4] object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
                   <div
-                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-purple-500/10 animate-float"
+                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-[#B8FF3A]/15 animate-float"
                     style={{ animationDelay: "0.3s" }}
                   >
                     <Image
                       src="/2.png?height=400&width=300"
                       width={300}
                       height={400}
-                      alt="Number calling interface"
+                      alt="Sliding puzzle board"
                       className="aspect-[3/4] object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
                   <div
-                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-purple-500/10 animate-float"
+                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-[#B8FF3A]/15 animate-float"
                     style={{ animationDelay: "0.5s" }}
                   >
                     <Image
                       src="/3.png?height=400&width=300"
                       width={300}
                       height={400}
-                      alt="Group playing together"
+                      alt="Toy-themed puzzle gallery"
                       className="aspect-[3/4] object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
                   <div
-                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-purple-500/10 animate-float"
+                    className="overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-[#B8FF3A]/15 animate-float"
                     style={{ animationDelay: "0.7s" }}
                   >
                     <Image
                       src="/4.png?height=400&width=300"
                       width={300}
                       height={400}
-                      alt="Winning celebration"
+                      alt="Completed puzzle picture"
                       className="aspect-[3/4] object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
@@ -456,26 +458,26 @@ export default function LandingPage() {
             id="testimonials"
             className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black/20"></div>
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#B8FF3A]/15 to-black/20"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#B8FF3A] to-transparent"></div>
             <div className="container px-4 md:px-6 relative">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2 animate-fadeIn">
-                  <div className="inline-block rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 text-sm text-white shadow-lg shadow-purple-500/25">
+                  <div className="inline-block rounded-lg bg-[#B8FF3A] px-3 py-1 text-sm text-black shadow-lg shadow-[#B8FF3A]/25">
                     User Reviews
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
-                    What Families Are Saying
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#B8FF3A]">
+                    What players enjoy
                   </h2>
                   <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Join thousands of families who have made their gatherings
-                    more fun with Loto Offline.
+                    Bright pictures, friendly sounds, and boards that are
+                    always possible to finish.
                   </p>
                 </div>
               </div>
               <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
                 <div
-                  className="flex flex-col justify-between rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 transition-all duration-300 hover:shadow-purple-500/10 hover:translate-y-[-5px] animate-fadeIn"
+                  className="flex flex-col justify-between rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 transition-all duration-300 hover:shadow-[#B8FF3A]/20 hover:translate-y-[-5px] animate-fadeIn"
                   style={{ animationDelay: "0.1s" }}
                 >
                   <div className="space-y-4">
@@ -488,20 +490,20 @@ export default function LandingPage() {
                           height="24"
                           viewBox="0 0 24 24"
                           fill="currentColor"
-                          className="h-5 w-5 text-purple-400"
+                          className="h-5 w-5 text-[#B8FF3A]"
                         >
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                         </svg>
                       ))}
                     </div>
                     <p className="text-gray-300">
-                      "Perfect for our family game nights! No more dealing with
-                      paper cards or lost markers. The kids love using their
-                      tablets and it's so much easier to organize."
+                      "I pick a character, slide the tiles, and the picture
+                      comes back together. The toy art is bright, and every
+                      shuffle can actually be solved."
                     </p>
                   </div>
                   <div className="mt-4 flex items-center gap-4">
-                    <div className="rounded-full bg-purple-500/10 border border-purple-500/30 p-1">
+                    <div className="rounded-full bg-[#B8FF3A]/10 border border-[#B8FF3A]/40 p-1">
                       <Image
                         src="/placeholder.svg?height=40&width=40"
                         width={40}
@@ -513,13 +515,13 @@ export default function LandingPage() {
                     <div>
                       <p className="font-medium">Sarah Johnson</p>
                       <p className="text-sm text-gray-400">
-                        Family Game Night Host
+                        Parent
                       </p>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="flex flex-col justify-between rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 transition-all duration-300 hover:shadow-purple-500/10 hover:translate-y-[-5px] animate-fadeIn"
+                  className="flex flex-col justify-between rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 transition-all duration-300 hover:shadow-[#B8FF3A]/20 hover:translate-y-[-5px] animate-fadeIn"
                   style={{ animationDelay: "0.3s" }}
                 >
                   <div className="space-y-4">
@@ -532,20 +534,20 @@ export default function LandingPage() {
                           height="24"
                           viewBox="0 0 24 24"
                           fill="currentColor"
-                          className="h-5 w-5 text-purple-400"
+                          className="h-5 w-5 text-[#B8FF3A]"
                         >
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                         </svg>
                       ))}
                     </div>
                     <p className="text-gray-300">
-                      "We use this at our senior center every week. It's so
-                      convenient and everyone can see their cards clearly on
-                      their phones. No more squinting at tiny numbers!"
+                      "The 3x3 is a quick start. Bigger boards and the rail
+                      variants keep it interesting, and the move timer makes
+                      each replay feel new."
                     </p>
                   </div>
                   <div className="mt-4 flex items-center gap-4">
-                    <div className="rounded-full bg-purple-500/10 border border-purple-500/30 p-1">
+                    <div className="rounded-full bg-[#B8FF3A]/10 border border-[#B8FF3A]/40 p-1">
                       <Image
                         src="/placeholder.svg?height=40&width=40"
                         width={40}
@@ -557,13 +559,13 @@ export default function LandingPage() {
                     <div>
                       <p className="font-medium">Robert Chen</p>
                       <p className="text-sm text-gray-400">
-                        Community Center Organizer
+                        Puzzle player
                       </p>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="flex flex-col justify-between rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 transition-all duration-300 hover:shadow-purple-500/10 hover:translate-y-[-5px] animate-fadeIn"
+                  className="flex flex-col justify-between rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 transition-all duration-300 hover:shadow-[#B8FF3A]/20 hover:translate-y-[-5px] animate-fadeIn"
                   style={{ animationDelay: "0.5s" }}
                 >
                   <div className="space-y-4">
@@ -576,20 +578,19 @@ export default function LandingPage() {
                           height="24"
                           viewBox="0 0 24 24"
                           fill="currentColor"
-                          className="h-5 w-5 text-purple-400"
+                          className="h-5 w-5 text-[#B8FF3A]"
                         >
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                         </svg>
                       ))}
                     </div>
                     <p className="text-gray-300">
-                      "Great for camping trips and family reunions! Works
-                      perfectly without internet and keeps everyone entertained.
-                      Simple interface that even grandparents can use."
+                      "Pictures, frames, and sounds are already on the device.
+                      I can play without an account or a connection."
                     </p>
                   </div>
                   <div className="mt-4 flex items-center gap-4">
-                    <div className="rounded-full bg-purple-500/10 border border-purple-500/30 p-1">
+                    <div className="rounded-full bg-[#B8FF3A]/10 border border-[#B8FF3A]/40 p-1">
                       <Image
                         src="/placeholder.svg?height=40&width=40"
                         width={40}
@@ -600,7 +601,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <p className="font-medium">Lisa Thompson</p>
-                      <p className="text-sm text-gray-400">Event Organizer</p>
+                      <p className="text-sm text-gray-400">Teen player</p>
                     </div>
                   </div>
                 </div>
@@ -612,17 +613,17 @@ export default function LandingPage() {
             id="download"
             className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
 
-            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-purple-900/20"></div>
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-[#B8FF3A]/15"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#B8FF3A] to-transparent"></div>
             <div className="container px-4 md:px-6 relative">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2 animate-fadeIn">
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
-                    Ready for Paperless Loto Fun?
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#B8FF3A]">
+                    Ready to slide?
                   </h2>
                   <p className="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Download Loto Offline now and bring digital convenience to
-                    your next group gathering!
+                    Download Puzzle Party and rebuild cheerful pictures, one
+                    tile at a time.
                   </p>
                 </div>
                 <div
@@ -630,10 +631,10 @@ export default function LandingPage() {
                   style={{ animationDelay: "0.4s" }}
                 >
                   <Link
-                    href="https://apps.apple.com/app/id6746702948"
+                    href="#download"
                   >
-                    <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm px-4 py-2 transition-all duration-300 hover:border-purple-500/30 hover:shadow-purple-500/10 hover:shadow-lg">
-                      <Apple className="h-6 w-6 text-purple-400" />
+                    <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm px-4 py-2 transition-all duration-300 hover:border-[#B8FF3A]/50 hover:shadow-[#B8FF3A]/20 hover:shadow-lg">
+                      <AppStoreIcon className="h-7 w-7 text-white" />
                       <div className="flex flex-col">
                         <span className="text-xs text-gray-400">
                           Download on the
@@ -644,9 +645,9 @@ export default function LandingPage() {
 
                   </Link>
 
-                  <Link href="https://play.google.com/store/apps/details?id=dev.evan.loto">
-                    <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm px-4 py-2 transition-all duration-300 hover:border-purple-500/30 hover:shadow-purple-500/10 hover:shadow-lg">
-                      <ShoppingBag className="h-6 w-6 text-purple-400" />
+                  <Link href="#download">
+                    <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm px-4 py-2 transition-all duration-300 hover:border-[#B8FF3A]/50 hover:shadow-[#B8FF3A]/20 hover:shadow-lg">
+                      <PlayStoreIcon className="h-7 w-7" />
                       <div className="flex flex-col">
                         <span className="text-xs text-gray-400">GET IT ON</span>
                         <span className="text-sm font-medium">Google Play</span>
@@ -665,20 +666,20 @@ export default function LandingPage() {
           id="contact"
           className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black/20"></div>
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#B8FF3A]/15 to-black/20"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#B8FF3A] to-transparent"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2 animate-fadeIn">
-                <div className="inline-block rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 text-sm text-white shadow-lg shadow-purple-500/25">
+                <div className="inline-block rounded-lg bg-[#B8FF3A] px-3 py-1 text-sm text-black shadow-lg shadow-[#B8FF3A]/25">
                   Get In Touch
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#B8FF3A]">
                   Contact Us
                 </h2>
                 <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Need help with the app or have suggestions? We're here to make
-                  your Loto experience even better!
+                  Need help with the app or have a suggestion? Send a note
+                  about Puzzle Party.
                 </p>
               </div>
             </div>
@@ -686,7 +687,7 @@ export default function LandingPage() {
             <div className="grid gap-8 lg:grid-cols-2">
               {/* Contact Form */}
               <div
-                className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 animate-fadeIn"
+                className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 animate-fadeIn"
                 style={{ animationDelay: "0.2s" }}
               >
                 <form className="space-y-4" onSubmit={handleSubmit}>
@@ -705,7 +706,7 @@ export default function LandingPage() {
                         onChange={handleInputChange}
                         placeholder="Your name"
                         required
-                        className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white placeholder:text-gray-400 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-colors duration-200"
+                        className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white placeholder:text-gray-400 focus:border-[#B8FF3A] focus:outline-none focus:ring-1 focus:ring-[#B8FF3A] transition-colors duration-200"
                       />
                     </div>
                     <div className="space-y-2">
@@ -723,7 +724,7 @@ export default function LandingPage() {
                         onChange={handleInputChange}
                         placeholder="Your email"
                         required
-                        className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white placeholder:text-gray-400 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-colors duration-200"
+                        className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white placeholder:text-gray-400 focus:border-[#B8FF3A] focus:outline-none focus:ring-1 focus:ring-[#B8FF3A] transition-colors duration-200"
                       />
                     </div>
                   </div>
@@ -740,7 +741,7 @@ export default function LandingPage() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-colors duration-200"
+                      className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white focus:border-[#B8FF3A] focus:outline-none focus:ring-1 focus:ring-[#B8FF3A] transition-colors duration-200"
                     >
                       <option value="">Select a topic</option>
                       <option value="technical">Technical Support</option>
@@ -762,10 +763,10 @@ export default function LandingPage() {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell us how we can help improve your Loto experience..."
+                      placeholder="Tell us how we can help improve Puzzle Party..."
                       rows={5}
                       required
-                      className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white placeholder:text-gray-400 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-colors duration-200"
+                      className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-white placeholder:text-gray-400 focus:border-[#B8FF3A] focus:outline-none focus:ring-1 focus:ring-[#B8FF3A] transition-colors duration-200"
                     ></textarea>
                   </div>
 
@@ -786,7 +787,7 @@ export default function LandingPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full gap-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-purple-500/25 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full gap-1 bg-[#B8FF3A] text-black hover:bg-[#a6eb2a] transition-all duration-300 shadow-lg shadow-[#B8FF3A]/25 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
@@ -797,11 +798,11 @@ export default function LandingPage() {
               <div className="space-y-6">
 
                 <div
-                  className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 animate-fadeIn"
+                  className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 animate-fadeIn"
                   style={{ animationDelay: "0.4s" }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/30">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -826,7 +827,7 @@ export default function LandingPage() {
                 </div>
 
                 <div
-                  className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-purple-500/5 animate-fadeIn"
+                  className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-6 shadow-xl shadow-[#B8FF3A]/10 animate-fadeIn"
                   style={{ animationDelay: "0.6s" }}
                 >
                   <div className="space-y-4">
@@ -834,7 +835,7 @@ export default function LandingPage() {
                     <div className="flex space-x-4">
                       <a
                         href="#"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 transition-all duration-300 hover:bg-purple-500/20 hover:text-white"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40 transition-all duration-300 hover:bg-[#B8FF3A]/20 hover:text-white"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -854,7 +855,7 @@ export default function LandingPage() {
                       </a>
                       <a
                         href="#"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 transition-all duration-300 hover:bg-purple-500/20 hover:text-white"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40 transition-all duration-300 hover:bg-[#B8FF3A]/20 hover:text-white"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -874,7 +875,7 @@ export default function LandingPage() {
                       </a>
                       <a
                         href="#"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 transition-all duration-300 hover:bg-purple-500/20 hover:text-white"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40 transition-all duration-300 hover:bg-[#B8FF3A]/20 hover:text-white"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -903,7 +904,7 @@ export default function LandingPage() {
                       </a>
                       <a
                         href="#"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 transition-all duration-300 hover:bg-purple-500/20 hover:text-white"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B8FF3A]/10 text-[#B8FF3A] border border-[#B8FF3A]/40 transition-all duration-300 hover:bg-[#B8FF3A]/20 hover:text-white"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -934,12 +935,12 @@ export default function LandingPage() {
           <div className="container flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
             <div className="flex gap-2 items-center text-lg font-bold">
               <div className="relative">
-                <div className="w-5 h-5 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold">
-                  B
+                <div className="w-5 h-5 bg-[#B8FF3A] text-black rounded-full flex items-center justify-center text-xs font-bold">
+                  P
                 </div>
               </div>
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Loto
+              <span className="text-[#B8FF3A]">
+                Puzzle Party
               </span>
             </div>
             <p className="text-center text-sm text-gray-400 md:text-left">
@@ -949,19 +950,19 @@ export default function LandingPage() {
             <div className="flex gap-4">
               <Link
                 href="/privacy"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                className="text-sm text-gray-400 hover:text-[#B8FF3A] transition-colors duration-300"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                className="text-sm text-gray-400 hover:text-[#B8FF3A] transition-colors duration-300"
               >
                 Terms of Service
               </Link>
               <Link
                 href="#contact"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                className="text-sm text-gray-400 hover:text-[#B8FF3A] transition-colors duration-300"
               >
                 Contact
               </Link>

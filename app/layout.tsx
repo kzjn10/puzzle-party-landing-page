@@ -3,9 +3,9 @@ import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
-  title: "Loto - Ultimate Experience",
+  title: "Puzzle Party",
   description:
-    "The perfect digital Bingo companion for family gatherings, parties, and group events. Play classic Bingo games without the hassle of paper cards - completely offline!",
+    "A cheerful sliding-puzzle game. Choose a collection, pick an illustrated character, and rebuild the picture by sliding tiles. Bright toy-inspired art, friendly audio, and local play with no backend.",
 };
 
 export default function RootLayout({
